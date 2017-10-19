@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <!-- Tag meta configurada para dá um refresh "F5" na página a cada 5 segundos .. -->
+    <meta http-equiv="refresh" content="15"; url="{% url 'home' %}">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Descricao - Geral</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Acme|Bree+Serif|Lobster|Modak" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Source+Sans+Pro" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Botoes table CSS -->
+    <link href="{% static 'css/botoes.css' %}" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+
+    <!-- styles core CSS -->
+    <link href="{% static 'css/painel_corpo.css' %}" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="menu">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" id="logo-text" href="{% url 'home' %}" style="font-family: 'Acme', sans-serif; font-size: 38px; color: white;">Tattica | <small style="color: orange;">Quadro</small></a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <div class="positionbutton">
+            <button type="button" class="btn btn-success"><a href="{% url 'adicionar' %}">Novo</a></button>
+          </div>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Apartamento</th>
+              <th>Condomínio</th>
+              <th>Descrição</th>
+              <th>Situação</th>
+              <th>Status</th>
+              <th>Data Liberação</th>
+              <th>Operador</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Lorem</td>
+              <td>ipsum</td>
+              <td>dolor</td>
+              <td>sit</td>
+              <td>sit</td>
+              <td>sit</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>amet</td>
+              <td>consectetur</td>
+              <td>adipiscing</td>
+              <td>elit</td>
+              <td>elit</td>
+              <td>elit</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Integer</td>
+              <td>nec</td>
+              <td>odio</td>
+              <td>Praesent</td>
+              <td>Praesent</td>
+              <td>Praesent</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>libero</td>
+              <td>Sed</td>
+              <td>cursus</td>
+              <td>ante</td>
+              <td>ante</td>
+              <td>ante</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>dapibus</td>
+              <td>diam</td>
+              <td>Sed</td>
+              <td>nisi</td>
+              <td>nisi</td>
+              <td>nisi</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Nulla</td>
+              <td>quis</td>
+              <td>sem</td>
+              <td>at</td>
+              <td>at</td>
+              <td>at</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>nibh</td>
+              <td>elementum</td>
+              <td>imperdiet</td>
+              <td>Duis</td>
+              <td>Duis</td>
+              <td>Duis</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>sagittis</td>
+              <td>ipsum</td>
+              <td>Praesent</td>
+              <td>mauris</td>
+              <td>mauris</td>
+              <td>mauris</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>Fusce</td>
+              <td>nec</td>
+              <td>tellus</td>
+              <td>sed</td>
+              <td>sed</td>
+              <td>sed</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td>augue</td>
+              <td>semper</td>
+              <td>porta</td>
+              <td>Mauris</td>
+              <td>Mauris</td>
+              <td>Mauris</td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="painel_button">
+        <div class="butposition">
+          <button type="button" >Deletar</button>
+          <button type="button">Editar</button>
+        </div>
+      </div>
+
+    </div><!-- END container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery.min.js"><\/script>')</script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{% static 'js/ie10-viewport-bug-workaround.js' %}"></script>
+
+
+    <!-- jQuery  -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+
+    <!-- jQuery  -->
+    <script src="{% static 'js/holder.min.js' %}"></script>
+
+  </body>
+</html>
