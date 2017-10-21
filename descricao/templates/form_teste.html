@@ -1,0 +1,143 @@
+<div class="container">
+        <div class="table-responsive2">
+            <div class="row">
+
+              <form>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Central</label>
+                    <select class="form-control" type="text" name="central" style="text-align: center;">
+                      <option>---</option>
+                      <option>Mossad</option>
+                      <option>MI5</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Condomínio</label>
+                  <input type="text" class="form-control" name="condominio" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect2">Apartamento</label>
+                  <input type="number" class="form-control" name="apartamento" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Status</label>
+                    <select class="form-control" type="text" name="status">
+                      <option>---</option>
+                      <option>A Liberar</option>
+                      <option>Não Liberado(a)</option>
+                      <option>Liberado(a)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Data</label>
+                  <input type="date" class="form-control" name="data" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Operador</label>
+                  <input type="text" class="form-control" name="operador" placeholder="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Descrição</label>
+                  <textarea class="form-control" name="descricao" style="height: 100px;"></textarea>
+                </div>
+                <div class="col-xs-12" id="botao">
+                  <div class="posicao-button">
+                    <button type="submit" class="btn btn-primary">Salvar</button>
+                  </div>
+                </div>
+              </form>
+
+            </div>
+        </div>
+      </div><!-- END container -->
+      <style type="text/css">
+        .container {
+          width: 90%;
+        }
+        .table-responsive2 {
+          background-color: #2F3E47;
+          margin: auto;
+          margin-top: 30px;
+          width: 60%;
+          height: 650px;
+        }
+        .row {
+          width: 90%;
+          height: 630px;
+          margin: auto;
+          padding-top: 20px;
+        }
+        .row label {
+          color: white;
+        }
+        .row #botao {
+          width: 100%;
+          height: 40px;
+          margin: auto;
+          margin-top: 5px;
+        }
+        .row .posicao-button {
+          width: 8.1%;
+          height: 40px;
+          margin: auto;
+        }
+        @media only screen and (max-width: 1024px) {
+          .container {
+            width: 90%;
+          }
+          .table-responsive2 {
+            background-color: #2F3E47;
+            margin: auto;
+            margin-top: 60px;
+            width: 90%;
+            height: 500px;
+          }
+          .row {
+            width: 100%;
+            height: 450px;
+            padding-top: 50px;
+          }
+          .row label {
+            color: white;
+          }
+          .row label input {
+            display: block;
+            width: 100%;
+          }
+        }
+        @media only screen and (max-width: 380px) {
+          .container {
+            width: 90%;
+          }
+          .table-responsive2 {
+            background-color: #2F3E47;
+            margin: auto;
+            margin-top: 60px;
+            width: 90%;
+            height: 650px;
+          }
+          .row {
+            width: 100%;
+            height: 450px;
+            padding-top: 20px;
+          }
+          .row label {
+            color: white;
+          }
+          .row label input {
+            display: block;
+            width: 100%;
+          }
+          .row #botao {
+            width: 100%;
+            height: 40px;
+            margin: auto;
+            margin-top: 5px;
+          }
+          .row .posicao-button {
+            width: 30%;
+            height: 40px;
+            margin: auto;
+          }
+        }
+      </style>
