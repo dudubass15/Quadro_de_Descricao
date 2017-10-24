@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load bootstrap %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -49,12 +50,10 @@
       <div class="container">
         <div class="table-responsive2">
             <div class="row">
-
-              <form action="adicionar" method="POST">
+              <h1>Formulário</h1>
+              <form action="adicionar" method="POST" class="form-horizontal">
                 {%csrf_token%}
-                <div class="form-group">
-                  {{ form.as_p}}                  
-                </div>
+                {{ form|bootstrap }}
                 <div class="col-xs-12" id="botao">
                   <div class="posicao-button">
                     <button type="submit" class="btn btn-primary">Salvar</button>
@@ -66,15 +65,20 @@
         </div>
       </div><!-- END container -->
       <style type="text/css">
+        h1 {
+          color: #FCA205;
+          font-family: 'Lobster';
+          text-align: center;
+        }
         .container {
           width: 90%;
         }
         .table-responsive2 {
           background-color: #2F3E47;
           margin: auto;
-          margin-top: 30px;
+          margin-top: 50px;
           width: 60%;
-          height: 750px;
+          height: 680px;
         }
         .row {
           width: 90%;
@@ -133,7 +137,7 @@
           }
           .row {
             width: 100%;
-            height: 450px;
+            height: 500px;
             padding-top: 20px;
           }
           .row label {
