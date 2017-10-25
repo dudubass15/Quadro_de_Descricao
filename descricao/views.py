@@ -2,10 +2,13 @@
 from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponseRedirect
 from .forms import PostForm
+from .models import Post
 
 
 def index(request):
-    return render(request, 'index.html', {})
+	post = Post.objects.all()
+
+	return render(request, 'index.html', {'post': post})
 
 def adicionar(request):
 	if request.method == "POST":

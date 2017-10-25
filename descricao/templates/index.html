@@ -55,7 +55,7 @@
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+  {% block content %}
     <div class="container">
 
       <div class="table-responsive">
@@ -64,117 +64,31 @@
             <tr>
               <th>Apartamento</th>
               <th>Condomínio</th>
-              <th class="descricaowidt">Descrição</th>
+              <th>Descrição</th>
               <th>Situação</th>
-              <th>Status</th>
               <th>Data Liberação</th>
               <th>Operador</th>
+              <th>Central</th>
             </tr>
           </thead>
           <tbody>
+            {% for Post in post %}
             <tr>
-              <td>Lorem</td>
-              <td>ipsum</td>
-              <td class="descricaowidt">dolor</td>
-              <td>sit</td>
-              <td>sit</td>
-              <td>sit</td>
-              <td></td>
+              <td>{{ Post.apartamento }}</td>
+              <td>{{ Post.condominio }}</td>
+              <td>{{ Post.descricao }}</td>
+              <td>{{ Post.liberacao }}</td>
+              <td>{{ Post.data_liberacao }}</td>
+              <td>{{ Post.nome_operador }}</td>
+              <td>{{ Post.central }}</td>
             </tr>
-            <tr>
-              <td>amet</td>
-              <td>consectetur</td>
-              <td class="descricaowidt">dolor</td>
-              <td>elit</td>
-              <td>elit</td>
-              <td>elit</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Integer</td>
-              <td>nec</td>
-              <td class="descricaowidt">dolor</td>
-              <td>Praesent</td>
-              <td>Praesent</td>
-              <td>Praesent</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>libero</td>
-              <td>Sed</td>
-              <td class="descricaowidt">dolor</td>
-              <td>ante</td>
-              <td>ante</td>
-              <td>ante</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>dapibus</td>
-              <td>diam</td>
-              <td class="descricaowidt">dolor</td>
-              <td>nisi</td>
-              <td>nisi</td>
-              <td>nisi</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Nulla</td>
-              <td>quis</td>
-              <td class="descricaowidt">dolor</td>
-              <td>at</td>
-              <td>at</td>
-              <td>at</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>nibh</td>
-              <td>elementum</td>
-              <td class="descricaowidt">dolor</td>
-              <td>Duis</td>
-              <td>Duis</td>
-              <td>Duis</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>sagittis</td>
-              <td>ipsum</td>
-              <td class="descricaowidt">dolor</td>
-              <td>mauris</td>
-              <td>mauris</td>
-              <td>mauris</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>Fusce</td>
-              <td>nec</td>
-              <td class="descricaowidt">dolor</td>
-              <td>sed</td>
-              <td>sed</td>
-              <td>sed</td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>augue</td>
-              <td>semper</td>
-              <td class="descricaowidt">dolor</td>
-              <td>Mauris</td>
-              <td>Mauris</td>
-              <td>Mauris</td>
-              <td></td>
-            </tr>
+            {% endfor %}
           </tbody>
         </table>
       </div>
-
-      <div class="painel_button">
-        <div class="butposition">
-          <button type="button" >Deletar</button>
-          <button type="button">Editar</button>
-        </div>
-      </div>
-
     </div><!-- END container -->
-
+  {% endblock %}
+  
     <style type="text/css">
 
         .table thead .descricaowidt {
@@ -188,25 +102,6 @@
           width: 100%;
           height: 50px;
           margin: auto;
-          }
-          .butposition{
-          width: 100%;
-          height: 50px;
-          float: right;
-
-          }
-          .butposition{
-          margin: auto;
-          }
-          .butposition button{
-          width: 80px;
-          height: 40px;
-          margin-top: 5px;
-          float: right;
-          margin-right: 10px;
-          background-color: #2F3E47;
-            color: #FFFFFF;
-            border-radius: 4px;
           }
     </style>
 

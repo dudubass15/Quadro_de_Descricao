@@ -24,6 +24,9 @@
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
+    
+    <!-- Função que é chamada ao enviar o formulário -->
+    <script src="{% static 'js/envio.js' %}"></script>
 
   </head>
   {% block content %}
@@ -56,7 +59,7 @@
                 {{ form|bootstrap }}
                 <div class="col-xs-12" id="botao">
                   <div class="posicao-button">
-                    <button type="submit" class="btn btn-primary">Salvar</button>
+                    <button type="submit" class="btn btn-primary" onclick="Enviar()">Salvar</button>
                   </div>
                 </div>
               </form>
