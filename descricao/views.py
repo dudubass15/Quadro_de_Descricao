@@ -53,3 +53,8 @@ def adicionar_mi5(request):
 	    form = PostForm()
 
 	return render(request, 'inserir_mi5.html', {'form': form})
+
+def search(request):
+	post = Post.objects.all().filter(central='Mossad')
+
+	return render(request, 'index.html', {'post': post})

@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^adicionar_mossad$', views.adicionar_mossad, name='adicionar_mossad'),
     url(r'^mi5$', views.mi5, name='mi5'),
     url(r'^adicionar_mi5$', views.adicionar_mi5, name='adicionar_mi5'),
+    url(r'^search', views.search, name='search'),
 ]
