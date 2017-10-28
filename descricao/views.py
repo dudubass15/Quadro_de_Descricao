@@ -3,8 +3,6 @@ from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from .forms import PostForm
 from .models import Post
-from django.db.models import Q
-
 
 def index(request):
 	post = Post.objects.all() #Aqui chama todos os objetos do banco e passa para o template (index)
@@ -56,8 +54,6 @@ def adicionar_mi5(request):
 	return render(request, 'inserir_mi5.html', {'form': form})
 
 def search(request):
-	post = Post.objects.all().filter(central='Mossad') #Parte do código que está dando errado
+	post = Post.objects.filter(central='Mossad')
 
-	post1 = Post.objects.all().filter(central='MI5')
-
-	return render(request, 'index.html', {'post': post, 'post': post1})
+	return render(request, 'index.html', {'post': post})

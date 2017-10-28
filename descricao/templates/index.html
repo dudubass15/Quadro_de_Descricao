@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load static %}
+{% load busca %}
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -46,6 +47,9 @@
           <a class="navbar-brand" id="logo-text" href="{% url 'home' %}" style="font-family: 'Acme', sans-serif; font-size: 38px; color: white;">Tattica | <small style="color: orange;">Quadro</small></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
+          <div class="position-img">
+            <img src="{% static 'img/config.png' %}">
+          </div>
           <div class="positionbutton">
             <button type="button" class="btn btn-success"><a href="{% url 'adicionar' %}">Novo</a></button>
           </div>
@@ -62,7 +66,7 @@
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Search for...">
                   <span class="input-group-btn">
-                    <button class="btn btn-default" type="text">Buscar</button>
+                    <button class="btn btn-default" type="submit">Buscar</button>
                   </span>
                 </div><!-- /input-group -->
               </div><!-- /.col-lg-6 -->
@@ -102,6 +106,22 @@
   {% endblock %}
   
     <style type="text/css">
+        #navbar{
+          padding-right:
+        }
+        .position-img {
+          width: 28px;
+          height: 32px;
+          float: right;
+          margin-top: 8px;
+        }
+        .position-img img {
+          margin: auto;
+          margin-top: 3px;
+        }
+        .positionbutton{
+          padding-right: 24px;
+        }
         .buscador {
           width: 100%;
           height: 40px;
