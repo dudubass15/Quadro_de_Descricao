@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from .forms import PostForm
-from .models import Post
+from descricao.models import Post
 
 def index(request):
 	post = Post.objects.all() #Aqui chama todos os objetos do banco e passa para o template (index)
