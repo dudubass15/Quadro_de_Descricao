@@ -1,6 +1,7 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
+<html lang="PT">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,8 +22,8 @@
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
 
-    <!-- Botoes table CSS -->
-    <link href="{% static 'css/botoes.css' %}" rel="stylesheet">
+    <!--  -->
+    <link href="{% static 'css/mossad.css' %}" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="{% static 'css/dashboard.css' %}" rel="stylesheet">
@@ -46,6 +47,11 @@
           <a class="navbar-brand" id="logo-text" href="{% url 'mossad' %}" style="font-family: 'Acme', sans-serif; font-size: 38px; color: white;">Tattica | <small style="color: orange;">Quadro</small></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
+          <div class="position-img">
+            <a href="#">
+              <img src="{% static 'img/config.png' %}" title="Modo de Visualização" type="button" data-toggle="modal" data-target="#exampleModal">
+            </a>
+          </div>
           <div class="positionbutton">
             <button type="button" class="btn btn-success"><a href="{% url 'adicionar_mossad' %}">Novo</a></button>
           </div>
@@ -100,67 +106,28 @@
       </div>
     </div><!-- END container -->
   {% endblock %}
-  
-    <style type="text/css">
-        .buscador {
-          width: 100%;
-          height: 40px;
-          margin-top: 10px;
-        }
-        .buscador .buscador-input{
-          width: 250px;
-          height: 40px;
-          float: right;
-        }
-        .buscador .buscador-input .input-group{
-          width: 250px;
-        }
-        .buscador .buscador-input input {
-          background-color: #2F3E47;
-        }
-        .buscador .buscador-input button {
-          background-color: #2F3E47;
-          color: white;
-        }
-        .buscador .buscador-input button:hover {
-          background-color: #84929b;
-          color: white;
-        }
-        .table thead .descricaowidt {
-          width: 500px;
-          text-align: center;
-        }
-        .table tbody .descricaowidt {
-          width: 500px;
-        }
-        .painel_button{
-          width: 100%;
-          height: 50px;
-          margin: auto;
-        }
-        .container {
-          width: 90%;
-        }
-        .table-responsive {
-          background-color: #2F3E47;
-          width: 100%;
-          margin: auto;
-          margin-top: 10px;
-        }
-        .table-responsive table thead tr th{
-          color: white;
-          font-size: 18px;
-          font-family: 'Source Sans Pro', sans-serif;
-        }
-        .table-responsive table tbody tr td{
-          color: white;
-        }
-        .table-responsive table tbody td {
-          background-color: #2F3E47;
-          margin-top: 30px;
-          border-top: 1px solid #44525A;
-        }
-    </style>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Visualização Painel</h5>
+        </div>
+        <div class="modal-body">
+          <div class="modalbutton">
+            <div class="buttonm">
+              <a href="home">
+                <button type="button" class="btn btn-light">TV</button>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

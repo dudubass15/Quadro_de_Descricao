@@ -1,6 +1,3 @@
-#navbar{
-  padding-right:
-}
 .position-img {
   width: 28px;
   height: 32px;
@@ -14,7 +11,30 @@
 .positionbutton{
   padding-right: 24px;
 }
-
+.buscador {
+  width: 100%;
+  height: 40px;
+  margin-top: 10px;
+}
+.buscador .buscador-input{
+  width: 250px;
+  height: 40px;
+  float: right;
+}
+.buscador .buscador-input .input-group{
+  width: 250px;
+}
+.buscador .buscador-input input {
+  background-color: #2F3E47;
+}
+.buscador .buscador-input button {
+  background-color: #2F3E47;
+  color: white;
+}
+.buscador .buscador-input button:hover {
+  background-color: #84929b;
+  color: white;
+}
 .table thead .descricaowidt {
   width: 500px;
   text-align: center;
@@ -34,7 +54,7 @@
   background-color: #2F3E47;
   width: 100%;
   margin: auto;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 .table-responsive table thead tr th{
   color: white;
@@ -54,7 +74,7 @@
   height: 50px;
 }
 .buttonm{
-  width: 310px;
+  width: 150px;
   height: 40px;
   margin: auto;
 }

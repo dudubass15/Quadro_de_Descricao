@@ -1,6 +1,7 @@
+{% load staticfiles %}
+
 <!DOCTYPE html>
-{% load static %}
-<html lang="en">
+<html lang="PT">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +48,7 @@
         <div id="navbar" class="collapse navbar-collapse">
           <div class="position-img">
             <a href="#">
-              <img src="{% static 'img/config.png' %}" title="Configurações" type="button" data-toggle="modal" data-target="#exampleModal">
+              <img src="{% static 'img/config.png' %}" title="Modo de Visualização" type="button" data-toggle="modal" data-target="#exampleModal">
             </a>
           </div>
           <div class="positionbutton">
@@ -101,25 +102,22 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Configurações do Painel</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <h5 class="modal-title" id="exampleModalLabel">Visualização Painel</h5>
         </div>
         <div class="modal-body">
           <div class="modalbutton">
             <div class="buttonm">
               <a href="mossad">
-                <button type="button" class="btn btn-light">Mossad</button>
+                <button type="button" class="btn btn-light">Painel Mossad</button>
               </a>
               <a href="mi5">
-                <button type="button" class="btn btn-light">MI5</button>
+                <button type="button" class="btn btn-light">Painel MI5</button>
               </a>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
         </div>
       </div>
     </div>
