@@ -3,7 +3,6 @@ from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from .forms import PostForm
 from descricao.models import Post
-from django.db.models import CharField
 
 def index(request):
 	post = Post.objects.all() #Aqui chama todos os objetos do banco e passa para o template (index)
@@ -54,10 +53,10 @@ def adicionar_mi5(request):
 
 	return render(request, 'inserir_mi5.html', {'form': form})
 
-def search(request):
-	form = Post.objects.all()
-	var_get_search = request.POST('buscar')
-	if var_get_search is not None:
-		form = Post.objects.filter(condominio__icontains=var_get_search)
 
-	return render(request, 'mossad.html', {'form': form})
+def search(request):
+	busca = request.POST.get('teste')
+	if busca is not None:
+		busca = Post.objects.filter(condominio__icontains=busca)
+
+		return render(request, 'mossad.html', {'post': busca})
