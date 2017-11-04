@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post
+from .models import Post, Usuario
 
 Centrais = (
     ('MI5', 'MI5'),
@@ -24,3 +24,13 @@ class PostForm(forms.ModelForm):
 	class Meta:
 		model = Post
 		fields = ['apartamento','condominio', 'liberacao', 'data_liberacao', 'nome_operador', 'central', 'descricao']
+
+class UsuarioForm(forms.ModelForm):
+	nome = forms.CharField(max_length=200)
+	sobrenome = forms.CharField(max_length=200)
+	email = forms.EmailField()
+	password = forms.CharField(max_length=50, widget=forms.PasswordInput)
+
+	class Meta:
+		model = Usuario
+		fields = ['nome', 'sobrenome', 'email', 'password']

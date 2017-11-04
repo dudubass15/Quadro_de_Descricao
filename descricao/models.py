@@ -15,3 +15,12 @@ class Post(models.Model):
 
 	def __str__(self):
 		return self.condominio
+
+class Usuario(models.Model):
+	nome = models.CharField(max_length=200)
+	sobrenome = models.CharField(max_length=200)
+	email = models.EmailField()
+	password = models.CharField(max_length=50)
+
+	def __str__(self):
+		return self.nome
