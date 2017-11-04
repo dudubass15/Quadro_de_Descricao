@@ -54,9 +54,35 @@ def adicionar_mi5(request):
 	return render(request, 'inserir_mi5.html', {'form': form})
 
 
-def search(request):
+def search_mossad(request):
 	busca = request.POST.get('teste')
-	if busca is not None:
-		busca = Post.objects.filter(condominio__icontains=busca)
+	if busca == '':
+		busca = Post.objects.filter(central='Mossad')
 
-		return render(request, 'mossad.html', {'post': busca})
+		return HttpResponseRedirect('mossad')
+
+	else:
+		if busca == busca:
+			busca = Post.objects.filter(condominio__icontains=busca)
+
+			return render(request, 'mossad.html', {'post': busca})
+
+
+
+	#if busca is not None:
+	#	busca = Post.objects.filter(condominio__icontains=busca)
+
+	#	return render(request, 'mossad.html', {'post': busca})
+
+def search_mi5(request):
+	busca = request.POST.get('teste')
+	if busca == '':
+		busca = Post.objects.filter(central='MI5')
+
+		return HttpResponseRedirect('mi5')
+
+	else:
+		if busca == busca:
+			busca = Post.objects.filter(condominio__icontains=busca)
+			
+			return render(request, 'mi5.html', {'post': busca})

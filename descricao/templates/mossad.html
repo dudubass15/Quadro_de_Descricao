@@ -63,7 +63,7 @@
       <div class="buscador">
         <div class="buscador-input">
           <div class="row">
-            <form action="search" method="POST">{% csrf_token %}
+            <form action="search_mossad" method="POST">{% csrf_token %}
               <div class="col-lg-6">
                 <div class="input-group">
                   <input type="text" class="form-control" placeholder="Pesquisa" name="teste">
@@ -87,6 +87,7 @@
               <th>Data Liberação</th>
               <th>Operador</th>
               <th>Central</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -99,6 +100,14 @@
               <td>{{ Post.data_liberacao }}</td>
               <td>{{ Post.nome_operador }}</td>
               <td>{{ Post.central }}</td>
+              <td id="acoes">
+                <a href="#">
+                  <img src="{% static 'icons/editar.png' %}" title="Editar">
+                </a>
+                <a href="#">
+                  <img src="{% static 'icons/excluir.png' %}" title="Excluir">
+                </a>
+              </td>
             </tr>
             {% endfor %}
           </tbody>

@@ -63,14 +63,16 @@
       <div class="buscador">
         <div class="buscador-input">
           <div class="row">
-            <div class="col-lg-6">
-              <div class="input-group">
-                <input type="text" class="form-control" placeholder="Pesquisa">
-                <span class="input-group-btn">
-                  <button class="btn btn-default" type="button">Buscar</button>
-                </span>
-              </div><!-- /input-group -->
-            </div><!-- /.col-lg-6 -->
+            <form action="search_mi5" method="POST">{% csrf_token %}
+              <div class="col-lg-6">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Pesquisa" name="teste">
+                  <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Buscar</button>
+                  </span>
+                </div><!-- /input-group -->
+              </div><!-- /.col-lg-6 -->
+            </form>
           </div><!-- /.row -->
         </div>
       </div>
@@ -85,6 +87,7 @@
               <th>Data Liberação</th>
               <th>Operador</th>
               <th>Central</th>
+              <th>Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -97,6 +100,14 @@
               <td>{{ Post.data_liberacao }}</td>
               <td>{{ Post.nome_operador }}</td>
               <td>{{ Post.central }}</td>
+              <td id="acoes">
+                <a href="#">
+                  <img src="{% static 'icons/editar.png' %}" title="Editar">
+                </a>
+                <a href="#">
+                  <img src="{% static 'icons/excluir.png' %}" title="Excluir">
+                </a>
+              </td>
             </tr>
             {% endfor %}
           </tbody>
