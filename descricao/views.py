@@ -55,19 +55,17 @@ def adicionar_mi5(request):
 
 
 def search_mossad(request):
-	busca = request.POST.get('teste')
-	if busca == '':
-		busca = Post.objects.filter(central='Mossad')
+	busca = request.POST.get('teste')					#Recebe a requisão passada pelo form.
+	if busca == '': 									#condição indicando que se busca for igual a vazio.
+		busca = Post.objects.filter(central='Mossad') 	#Se a condiçao acima for True, filtra todos comparando Mossad.
 
-		return HttpResponseRedirect('mossad')
+		return HttpResponseRedirect('mossad') 			#retorna na página inicial mossad.html
 
-	else:
-		if busca == busca:
-			busca = Post.objects.filter(condominio__icontains=busca)
+	else: 												#Se não
+		if busca == busca: 								#Se busca for igual a busca (informação passada no input do form)
+			busca = Post.objects.filter(condominio__icontains=busca) #filtra o campo através do dado enviado pelo input.
 
-			return render(request, 'mossad.html', {'post': busca})
-
-
+			return render(request, 'mossad.html', {'post': busca}) #renderiza o filtro no template.
 
 	#if busca is not None:
 	#	busca = Post.objects.filter(condominio__icontains=busca)
