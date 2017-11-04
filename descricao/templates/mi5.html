@@ -65,7 +65,7 @@
             <form action="search_mi5" method="POST">{% csrf_token %}
               <div class="col-lg-6">
                 <div class="input-group">
-                  <input type="text" class="form-control" placeholder="Pesquisa" name="teste">
+                  <input type="text" class="form-control" placeholder="Pesquisa" name="Pesquisa">
                   <span class="input-group-btn">
                     <button class="btn btn-default" type="submit">Buscar</button>
                   </span>
@@ -113,6 +113,18 @@
       </div>
     </div><!-- END container -->
   {% endblock %}
+
+  <style type="text/css">
+    .acoes{
+      width: 80px;
+      height: 40px;
+      background-color: red;
+    }
+    .acoes .img-acoes a {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  </style>
 
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

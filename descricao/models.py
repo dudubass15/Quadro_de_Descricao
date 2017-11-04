@@ -16,6 +16,19 @@ class Post(models.Model):
 	def __str__(self):
 		return self.condominio
 
+class Delete(models.Model):
+	apartamento = models.IntegerField()
+	condominio = models.CharField(max_length=150)
+	liberacao = models.CharField(max_length=200)
+	data_liberacao = models.DateField()
+	nome_operador = models.CharField(max_length=200)
+	central = models.CharField(max_length=200)
+	descricao = models.TextField(max_length=300)
+	data_exclusao = models.DateTimeField()
+
+	def __str__(self):
+		return self.condominio
+
 class Usuario(models.Model):
 	nome = models.CharField(max_length=200)
 	sobrenome = models.CharField(max_length=200)

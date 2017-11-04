@@ -117,12 +117,3 @@
 .modal-footer button{
   margin: auto;
 }
-.acoes{
-  width: 80px;
-  height: 40px;
-  background-color: red;
-}
-.acoes .img-acoes a{
-  padding-left: 20px;
-  padding-right: 20px;
-}

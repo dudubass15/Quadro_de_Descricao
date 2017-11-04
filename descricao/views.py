@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 from .forms import PostForm
 from descricao.models import Post
+from descricao.models import Delete
 
 def index(request):
 	post = Post.objects.all() #Aqui chama todos os objetos do banco e passa para o template (index)
@@ -55,7 +56,7 @@ def adicionar_mi5(request):
 
 
 def search_mossad(request):
-	busca = request.POST.get('teste')					#Recebe a requisão passada pelo form.
+	busca = request.POST.get('Pesquisa')				#Recebe a requisão passada pelo form.
 	if busca == '': 									#condição indicando que se busca for igual a vazio.
 		busca = Post.objects.filter(central='Mossad') 	#Se a condiçao acima for True, filtra todos comparando Mossad.
 
@@ -67,13 +68,8 @@ def search_mossad(request):
 
 			return render(request, 'mossad.html', {'post': busca}) #renderiza o filtro no template.
 
-	#if busca is not None:
-	#	busca = Post.objects.filter(condominio__icontains=busca)
-
-	#	return render(request, 'mossad.html', {'post': busca})
-
 def search_mi5(request):
-	busca = request.POST.get('teste')
+	busca = request.POST.get('Pesquisa')
 	if busca == '':
 		busca = Post.objects.filter(central='MI5')
 
@@ -84,3 +80,7 @@ def search_mi5(request):
 			busca = Post.objects.filter(condominio__icontains=busca)
 			
 			return render(request, 'mi5.html', {'post': busca})
+
+def arquivar(request):
+
+	return HttpResponse('Ainda em desenvolvimento ... Desculpe !')
