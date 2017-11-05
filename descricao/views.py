@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.shortcuts import render, HttpResponseRedirect, HttpResponse
+from django.shortcuts import render, HttpResponseRedirect, HttpResponse, redirect
 from .forms import PostForm
 from descricao.models import Post
 from descricao.models import Delete
@@ -81,6 +81,8 @@ def search_mi5(request):
 			
 			return render(request, 'mi5.html', {'post': busca})
 
-def arquivar(request):
+def arquivar(request,pk):
+	registro = Post.objects.get(id=pk)
+	registro.delete()
 
-	return HttpResponse('Ainda em desenvolvimento ... Desculpe !')
+	return redirect('mossad')

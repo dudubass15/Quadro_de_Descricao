@@ -31,6 +31,9 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="{% static 'js/ie-emulation-modes-warning.js' %}"></script>
 
+    <!-- Função que é chamada ao enviar o formulário -->
+    <script src="{% static 'js/envio.js' %}"></script>
+
   </head>
 
   <body>
@@ -101,7 +104,7 @@
               <td>{{ Post.central }}</td>
               <td class="acoes">
                 <div class="img-acoes">
-                  <a href="{% url 'arquivar' %}" name="teste">
+                  <a href="{% url 'arquivar' Post.id %}" name="teste">
                     <img src="{% static 'icons/teste1.svg' %}" height="22" width="22" title="Arquivar">
                   </a>
                 </div>

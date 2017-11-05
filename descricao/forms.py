@@ -9,7 +9,7 @@ Centrais = (
 Liberacao = (
 	('Liberado', 'Liberado'),
 	('A Liberar', 'A Liberar'),
-	('Liberado', 'Liberado'),
+	('Nao Liberado', 'Nao Liberado'),
 )
 
 class PostForm(forms.ModelForm):
