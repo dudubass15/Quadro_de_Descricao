@@ -22,8 +22,8 @@ class PostForm(forms.ModelForm):
 	descricao = forms.TextInput()
 
 	class Meta:
-	model = Post
-	fields = ['apartamento','condominio', 'liberacao', 'data_liberacao', 'nome_operador', 'central', 'descricao']
+		model = Post
+		fields = ['apartamento','condominio', 'liberacao', 'data_liberacao', 'nome_operador', 'central', 'descricao']
 
 class DeleteForm(forms.ModelForm):
 	apartamento = forms.IntegerField()
