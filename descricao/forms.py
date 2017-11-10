@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Usuario
+from .models import Post, Usuario, Delete
 
 Centrais = (
     ('MI5', 'MI5'),
@@ -22,7 +22,20 @@ class PostForm(forms.ModelForm):
 	descricao = forms.TextInput()
 
 	class Meta:
-		model = Post
+	model = Post
+	fields = ['apartamento','condominio', 'liberacao', 'data_liberacao', 'nome_operador', 'central', 'descricao']
+
+class DeleteForm(forms.ModelForm):
+	apartamento = forms.IntegerField()
+	condominio = forms.CharField(max_length=150)
+	liberacao = forms.ChoiceField(Liberacao)
+	data_liberacao = forms.DateField()
+	nome_operador = forms.CharField(max_length=200)
+	central = forms.ChoiceField(Centrais)
+	descricao = forms.TextInput()
+
+	class Meta:
+		model = Delete
 		fields = ['apartamento','condominio', 'liberacao', 'data_liberacao', 'nome_operador', 'central', 'descricao']
 
 class UsuarioForm(forms.ModelForm):
