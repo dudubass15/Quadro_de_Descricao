@@ -18,8 +18,7 @@ def adicionar(request):
 	else:
 	    form = PostForm()
 
-    	return render(request, 'inserir.html', {'form': form})
-
+	return render(request, 'inserir.html', {'form': form})
 
 def mossad(request):
 	post = Post.objects.filter(central='Mossad')

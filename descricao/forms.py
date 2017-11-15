@@ -16,7 +16,7 @@ class PostForm(forms.ModelForm):
 	apartamento = forms.IntegerField()
 	condominio = forms.CharField(max_length=150)
 	liberacao = forms.ChoiceField(Liberacao)
-	data_liberacao = forms.DateField()
+	data_liberacao = forms.CharField(widget=forms.DateTimeInput(attrs={'type':'Date'}))
 	nome_operador = forms.CharField(max_length=200)
 	central = forms.ChoiceField(Centrais)
 	descricao = forms.TextInput()
