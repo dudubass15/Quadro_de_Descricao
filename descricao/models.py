@@ -4,9 +4,17 @@ from django.db import models
 from django.utils import timezone
 
 
+class Condominio(models.Model):
+	ramal = models.IntegerField()
+	nome = models.CharField(max_length=220)
+	observacao = models.TextField(max_length=320)
+
+	def __str__(self):
+		return self.nome
+
 class Post(models.Model):
 	apartamento = models.IntegerField()
-	condominio = models.CharField(max_length=150)
+	condominio = models.ManyToManyField(Condominio)
 	liberacao = models.CharField(max_length=200)
 	data_liberacao = models.DateField()
 	nome_operador = models.CharField(max_length=200)
@@ -24,3 +32,8 @@ class Usuario(models.Model):
 
 	def __str__(self):
 		return self.nome
+
+class Central(models.Model):
+	nome = models.CharField(name='Central', max_length=220)
+	ramal_interno = models.IntegerField()
+	supervisor = models.ForeignKey(Usuario)
