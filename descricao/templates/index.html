@@ -71,7 +71,7 @@
           <thead>
             <tr>
               <th>Apartamento</th>
-              <th>Condomínio</th>
+              <!--<th>Condomínio</th>-->
               <th>Descrição</th>
               <th>Situação</th>
               <th>Data Liberação</th>
@@ -83,9 +83,9 @@
             {% for Post in post %}
             <tr>
               <td>{{ Post.apartamento }}</td>
-              <td>{{ Post.condominio_id }}</td>
+              <!--<td>{{ Post.condominio }}</td>-->
               <td>{{ Post.descricao }}</td>
-              <td>{{ Post.liberacao }}</td>
+              <td>{{ Post.liberacao_id }}</td>
               <td>{{ Post.data_liberacao }}</td>
               <td>{{ Post.nome_operador_id }}</td>
               <td>{{ Post.central_id }}</td>

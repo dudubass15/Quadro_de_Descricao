@@ -29,10 +29,16 @@ class Central(models.Model):
 	def __str__(self):
 		return self.nome
 
+class StatusLiberacao(models.Model):
+	status = models.CharField(max_length=120)
+
+	def __str__(self):
+		return self.status
+
 class Post(models.Model):
 	apartamento = models.IntegerField()
 	condominio = models.ManyToManyField(Condominio)
-	liberacao = models.CharField(max_length=200)
+	liberacao = models.ForeignKey(StatusLiberacao)
 	data_liberacao = models.DateField()
 	nome_operador = models.ForeignKey(Usuario)
 	central = models.ForeignKey(Central)
