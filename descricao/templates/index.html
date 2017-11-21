@@ -83,12 +83,12 @@
             {% for Post in post %}
             <tr>
               <td>{{ Post.apartamento }}</td>
-              <td>{{ Post.condominio }}</td>
+              <td>{{ Post.condominio_id }}</td>
               <td>{{ Post.descricao }}</td>
               <td>{{ Post.liberacao }}</td>
               <td>{{ Post.data_liberacao }}</td>
-              <td>{{ Post.nome_operador }}</td>
-              <td>{{ Post.central }}</td>
+              <td>{{ Post.nome_operador_id }}</td>
+              <td>{{ Post.central_id }}</td>
             </tr>
             {% endfor %}
           </tbody>

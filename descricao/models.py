@@ -37,3 +37,6 @@ class Post(models.Model):
 	nome_operador = models.ForeignKey(Usuario)
 	central = models.ForeignKey(Central)
 	descricao = models.TextField(max_length=300)
+
+	def __str__(self):
+		return self.liberacao
